@@ -179,3 +179,9 @@ Please, make sure all steps are using **the same** python version and that you h
 ## License
 
 [License](LICENSE.txt)
+
+## Project Links
+
+W&B Project: https://forge.coreweave.com/wandb/models-western-governors-university4962/nyc_airbnb
+
+GitHub Repository: https://github.com/tcarri36/Project-Build-an-ML-Pipeline-Starter
