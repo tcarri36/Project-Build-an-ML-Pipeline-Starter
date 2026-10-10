@@ -40,6 +40,7 @@ def go(config: DictConfig):
             _ = mlflow.run(
                 f"{config['main']['components_repository']}/get_data",
                 "main",
+                version="1.0.1",
                 env_manager="conda",
                 parameters={
                     "sample": config["etl"]["sample"],
@@ -81,6 +82,7 @@ def go(config: DictConfig):
              _ = mlflow.run(
                 f"{config['main']['components_repository']}/train_val_test_split",
                 "main",
+                version="1.0.1",
                 parameters={
                     "input": "clean_sample.csv:latest",
                     "test_size": config["modeling"]["test_size"],
@@ -126,6 +128,7 @@ def go(config: DictConfig):
             _ = mlflow.run(
                 f"{config['main']['components_repository']}/test_regression_model",
                 "main",
+                version="1.0.1",
                 parameters={
                     "mlflow_model": "model_export:prod",
                     "test_dataset": "test_data.csv:latest"
